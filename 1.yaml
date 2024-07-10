@@ -1,1 +1,10 @@
-123
+server1:
+    host: http://192.168.3.1
+    referer: https://ya.ru
+server3:
+    auth:
+        host: http://192.168.3.3:9090
+    lifetime: 1s
+dhcp:
+    allowed_lifetime_sec: 1500
+    cleanup_period_sec: 60

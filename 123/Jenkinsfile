@@ -17,10 +17,16 @@ pipeline {
                     println("Файл 1")
                     println yamldata1
 
+                    def yaml2 = new Yaml()
+                    def inputStream2 = new FileInputStream('Z:/1/2.yaml')
+                    def yamldata2 = yaml2.load(inputStream2)
+                    println("Файл 2")
+                    println yamldata2
+
                     for ( i in yamldata1){
                         println i.key
                         for (u in i.value) {
-                            println u
+                            
                             def testValue = u.value
                             def testKey = u.key
                             // println ("testValue: ${testValue}")
@@ -35,11 +41,8 @@ pipeline {
                                     println p.key
                                 }
                             }
-                        }
-                            
-                            
-
-                        
+                            println u.key
+                        }   
                     }
                 }
             }

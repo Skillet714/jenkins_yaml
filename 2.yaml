@@ -1,0 +1,8 @@
+server1:
+    host: http://172.255.0.1
+    referer: https://google.ru
+backend:
+    host: http://172.255.0.2
+dhcp:
+    allowed_lifetime_sec: 3000
+    cleanup_period_sec: 120
