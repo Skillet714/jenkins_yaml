@@ -1,0 +1,48 @@
+import org.yaml.snakeyaml.Yaml
+
+pipeline {
+    agent any
+    
+    stages {
+        stage('1') {
+            steps {
+                script {
+                    // def yamlFile = new File('"Z:/1/1.yaml"')
+                    // def yamlObject = new Yaml().load(yamlFile)
+                    // echo "${yamlObject}"
+
+                    def yaml1 = new Yaml()
+                    def inputStream1 = new FileInputStream('Z:/1/1.yaml')
+                    def yamldata1 = yaml1.load(inputStream1)
+                    println("Файл 1")
+                    println yamldata1
+
+                    for ( i in yamldata1){
+                        println i.key
+                        for (u in i.value) {
+                            println u
+                            def testValue = u.value
+                            def testKey = u.key
+                            // println ("testValue: ${testValue}")
+                            // println ("testKey: ${testKey}")
+                            // if ( "host" in u.value ) {
+                            //     for (p in u.value){
+                            //         println p.key
+                            //     }
+                            // }
+                            if ( "host" in testValue ) {
+                                for (p in u.value){
+                                    println p.key
+                                }
+                            }
+                        }
+                            
+                            
+
+                        
+                    }
+                }
+            }
+        }
+    }
+}
