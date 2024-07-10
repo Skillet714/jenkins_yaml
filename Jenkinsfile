@@ -6,7 +6,7 @@ stages {
     stage('1') {
         steps {
             script {
-
+                echo "123"
             }
         }
     }
