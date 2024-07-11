@@ -50,7 +50,7 @@ pipeline {
                     println yamldata1
                     // sh "rm 3.yaml"
                     writeYaml file:"Z:/1/3.yaml", data: yamldata1
-
+                    // для тестов при выполнении на слейве
                     // emailext body: "123",
                     //     mimeType: 'text/plain',
                     //     attachmentsPattern: "3.yaml",
