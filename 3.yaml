@@ -1,0 +1,10 @@
+server1:
+  host: http://172.255.0.1
+  referer: https://google.ru
+server3:
+  auth:
+    host: '# не_найдено_значение'
+  lifetime: '# не_найдено_значение'
+dhcp:
+  allowed_lifetime_sec: 3000
+  cleanup_period_sec: 120
