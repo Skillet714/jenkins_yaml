@@ -55,7 +55,7 @@ pipeline {
                     //     mimeType: 'text/plain',
                     //     attachmentsPattern: "3.yaml",
                     //     subject: "Отправка yaml",
-                    //     to: 'DPPinaykin@sberbank.ru'
+                    //     to: 'YOUREMAIL@domain.ru' //для отправки раскоментить и подставить почтовый ящик
                 }
             }
         }
